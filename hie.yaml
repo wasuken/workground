@@ -1,14 +1,13 @@
 cradle:
-  multi:
-    - path: "./"
-      config:
-        cradle:
-          stack:
-            - path: "./src"
-              component: "workground:lib"
-            - path: "./app/Main.hs"
-              component: "workground:exe:workground-exe"
-    - path: "./Setup.hs"
-      config:
-        cradle:
-          none:
+  stack:
+    - path: "./src"
+      component: "workground:lib"
+
+    - path: "./app/Main.hs"
+      component: "workground:exe:workground-exe"
+
+    - path: "./app/Paths_workground.hs"
+      component: "workground:exe:workground-exe"
+
+    - path: "./test"
+      component: "workground:test:workground-test"
